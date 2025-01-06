@@ -24,7 +24,7 @@ When in game, the menu will open when the game is paused. You can keep the menu 
 
 Since the config file can be hard to read at times, I recommend using the mod [BepInEx Config Manager](https://github.com/BepInEx/BepInEx.ConfigurationManager) alongside this one to simplify the process and allow you to rebind keys while ingame.
 
-### Installation
+## Installation
 
 !!! You need [Bepinex 5](https://github.com/BepInEx/BepInEx/releases/latest) for mono !!!
 (if you have no idea what the versions mean try BepInEx_win_x64_5.4.23.2 and it might work. maybe)
