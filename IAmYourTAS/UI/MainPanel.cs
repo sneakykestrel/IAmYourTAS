@@ -165,7 +165,10 @@ public class MainPanel(UIBase owner) : UniverseLib.UI.Panels.PanelBase(owner)
         void AccurateShotgunShellsInput_OnValueChanged(string value) {
             try {
                 ShotgunSpreadManager.AmountPerfectlyAccurate = int.Parse(value);
-            } catch { }
+            }
+            catch {
+                // ignored
+            }
         };
 
         UIFactoryUtils.AddSpacer(ContentRoot, height: 5);

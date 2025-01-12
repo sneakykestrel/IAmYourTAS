@@ -19,22 +19,20 @@ public static class VariableHookManager
     public static void Update() {
         if (UIManager.HooksPanelInstance?.Enabled is null or false) return;
 
-        for (int i = 0; i < Hooks.Count; ++i) {
-            if (Hooks[i].path == "") continue;
+        foreach (var hook in Hooks) {
+            if (hook.path == "") continue;
             var t = Traverse.Create(GameManager.instance);
 
             // Very simple, could (and should) improve at a later date
             try {
-                foreach (var component in Hooks[i].path.Split('.')) {
-                    if (component.EndsWith("()")) {
-                        t = t.Method(component.Substring(0, component.Length - 2));
-                    } else {
-                        t = t.Field(component);
-                    }
+                foreach (var component in hook.path.Split('.')) {
+                    t = component.EndsWith("()") ? 
+                        t.Method(component.Substring(0, component.Length - 2)) : 
+                        t.Field(component);
                 }
-                Hooks[i].contents = t.GetValue().ToString();
+                hook.contents = t.GetValue().ToString();
             } catch {
-                Hooks[i].contents = "null";
+                hook.contents = "null";
             }
         }
     }

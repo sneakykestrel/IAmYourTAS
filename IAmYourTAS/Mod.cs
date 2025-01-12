@@ -21,7 +21,7 @@ public class Mod : BaseUnityPlugin
     public const string pluginVersion = "1.0.0";
 
     public static Mod Instance {  get; private set; }
-    public static IAYTInputManager InputManager { get; private set; } = new();
+    private static IAYTInputManager InputManager { get; set; } = new();
     internal static new ManualLogSource Logger;
 
     public static readonly string pluginPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
@@ -48,7 +48,7 @@ public class Mod : BaseUnityPlugin
         Logger.LogInfo("Hiiiiiiiiiiii :3");
     }
 
-    private void ULogHandler(string msg, LogType type) {
+    private static void ULogHandler(string msg, LogType type) {
         switch (type) {
             case LogType.Error:
                 Logger.LogError(msg);

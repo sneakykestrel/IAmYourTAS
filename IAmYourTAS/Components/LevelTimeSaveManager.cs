@@ -1,9 +1,9 @@
 ﻿using HarmonyLib;
 
 namespace IAmYourTAS.Components;
-public class LevelTimeSaveManager
+public static class LevelTimeSaveManager
 {
-    public static bool saveTimes = false;
+    private static bool saveTimes = false;
 
     public static void SetShouldSaveTimes(bool value) => saveTimes = value;
 

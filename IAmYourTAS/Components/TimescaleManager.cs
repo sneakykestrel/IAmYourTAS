@@ -1,8 +1,8 @@
-﻿using HarmonyLib;
-using System.Collections;
+﻿using System.Collections;
+using HarmonyLib;
 using UnityEngine;
 
-namespace IAmYourTAS;
+namespace IAmYourTAS.Components;
 
 static class TimescaleManager
 {

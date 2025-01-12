@@ -35,7 +35,6 @@ public static class ObjectVisibilityManager
         [HarmonyPrefix]
         public static void FixLayers(EnemyHuman __instance) {
             var obj = __instance.transform.Find("Animator/Enemy:Enemy_mesh").gameObject;
-            if (obj is null) return;
             obj.layer = LayerMask.NameToLayer("Enemy");
         }
     }

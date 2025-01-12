@@ -2,8 +2,8 @@
 using UnityEngine;
 using UniverseLib.Utility;
 
-namespace IAmYourTAS;
-public class LocationManager
+namespace IAmYourTAS.Components;
+public static class LocationManager
 {
     public static Vector3? savedPosition;
     public static Vector3? savedRotation;

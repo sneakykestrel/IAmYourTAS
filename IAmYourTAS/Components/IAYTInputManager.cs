@@ -20,7 +20,7 @@ public class IAYTInputManager {
         public KeyCode key = key;
     }
 
-    public static List<DefaultBindingInfo> DefaultBindings { get; private set; } = [
+    private static List<DefaultBindingInfo> DefaultBindings { get; set; } = [
         new(
             identifier: "Open Menu",
             description: "The key that opens the ingame menu (it'll be automatically opened when the game is paused too)",

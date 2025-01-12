@@ -21,7 +21,7 @@ public static class FullbrightManager
     }
 
     private static void CacheLights() {
-        foreach (var light in GameObject.FindObjectsOfType<Light>()) {
+        foreach (var light in Object.FindObjectsOfType<Light>()) {
             cachedLights[light] = light.enabled;
         }
     }
